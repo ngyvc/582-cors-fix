@@ -20,6 +20,8 @@ You will most likely need to install Express, MongoDB and CORS modules and middl
 
 ```npm install cors --save```
 
+You will also need to add in a ```.gitignore``` file with ```node_modules``` inside to ignore all node modules you will have to install.
+
 ## MongoDB Atlas Network Access
 
 ![atlas network access](assets/atlas-network-access.jpg)
