@@ -54,3 +54,9 @@ When you are ready with your project, start your server by running:
 `node index.js`
 
 For sample file, view [index.js](index.js)
+
+## Thunder Client to initialize external ports
+
+You **may** need to use Thunder Client to make a first request once your ports are made Public to be able to view it from any browser or web services.
+
+![thunder client](assets/thunderclient.jpg)
