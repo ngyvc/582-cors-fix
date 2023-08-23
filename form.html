@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <input type="text" id="name" name="name" placeholder="Name">
+        <input type="text" id="age" name="age" placeholder="Age">
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            let name = document.querySelector('#name').value;
+            let age = document.querySelector('#age').value;
+            const formData = { name, age };
+            fetch('https://potential-robot-9r9459q5xpx3pxrq-3000.app.github.dev/', {
+                method: 'post',
+                body: JSON.stringify(formData),
+                headers: {
+                    'Content-Type': 'application/json'
+                    // 'Content-Type': 'application/x-www-form-urlencoded',
+                },
+
+            }).then((res) => {
+                return res.text();
+            }).then((data) => {
+                console.log(data);
+            });
+        });
+    </script>
+</body>
+
+</html>
